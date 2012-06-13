@@ -14,7 +14,7 @@ object ScalaRedisProject extends Build
 
   lazy val coreSettings = commonSettings ++ template ++ Seq(
     name := "RedisClient",
-
+    resolvers += "twitter-repo" at "http://maven.twttr.com",
     libraryDependencies ++= Seq("commons-pool" % "commons-pool" % "1.5.6",
       "org.slf4j"      % "slf4j-api"     % "1.6.1",
       "org.slf4j"      % "slf4j-log4j12" % "1.6.1"  % "provided",
